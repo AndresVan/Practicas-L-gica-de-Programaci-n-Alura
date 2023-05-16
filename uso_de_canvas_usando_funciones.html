@@ -16,6 +16,7 @@
         var pincel = pantalla.getContext('2d'); //a pincel se le asigna la propiedad 2d del context de la pantalla
         var alturaAleatoria = Math.floor(Math.random()*400);
         var anchoAleatorio = Math.floor(Math.random()*600);
+        
         function dibujarRectangulo(colorRelleno,posX,posY,ancho,alto){
             pincel.fillStyle = colorRelleno;
             pincel.fillRect(posX,posY,ancho,alto);
