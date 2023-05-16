@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+</head>
+<body>
+    <script>
+        var pass = "1234*";
+        var user = "@andres";
+        var intentos = 2;
+        
+        
+
+        while(intentos>= 0){
+            var ingresoUser= prompt("Ingrese su nombre de usuario: ");
+            var ingresoPass = prompt("Ingrese la contraseña: ")
+
+            if(user ==ingresoUser && pass==ingresoPass){
+            alert("Bienvenido al sistema " + user);
+            break;
+            }else if(intentos==0){
+                alert("Comuníquese con el administrador del sistema")
+            }else{
+            alert("Credenciales Incorrectas, intente nuevamente " + intentos + " intentos");
+            }
+            intentos--;
+        }
+    </script>
+</body>
+</html>

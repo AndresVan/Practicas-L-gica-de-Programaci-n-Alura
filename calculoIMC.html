@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nombre1 = prompt("Cuál es su nombre?");
+        var nombre2 = prompt("Cuál es el nombre del usuario a comparar?");
+        var pesoUsuario1 = prompt("Cuál es el peso para el usuario "+ nombre1 +"?");
+        var pesoUsuario2 = prompt("Cuál es el peso para el usuario "+ nombre2 +"?");
+        var alturaUsuario1 = prompt("Cuál es la altura para el usuario "+ nombre1 +"?");
+        var alturaUsuario2 = prompt("Cuál es la altura para el usuario "+ nombre2 +"?");
+
+        function imprimir(msg){
+            document.write("<br>"+msg);
+        }
+
+        function calculoImcUsuario(pesoUsuario,alturaUsuario){
+            var imcUsuario = pesoUsuario/(alturaUsuario*alturaUsuario);
+            return imcUsuario;
+        }
+
+        function prom(imc1,imc2){
+            var promedio= (imc1+imc2)/2;
+            return promedio;
+        }
+       var imc1 = calculoImcUsuario(pesoUsuario1,alturaUsuario1);
+        document.write("El IMC del usuario " + nombre1+ " es: <hr>"+ imc1);
+       var imc2 = calculoImcUsuario(pesoUsuario2,alturaUsuario2);
+       document.write("<hr> El IMC del usuario " + nombre2+ " es: <hr>"+ imc2);
+       var promimc = prom(imc1,imc2);
+        document.write("<hr>El promedio del IMC de los dos usuarios es: <hr>"+ promimc);
+
+        if (imc1<= 18.5){
+            imprimir(nombre1 +" está por debajo del IMC recomendado");
+        }
+        if (18.5< imc1< 24.9){
+            imprimir(nombre1 + " su IMC está en su valor ideal!")
+        }
+        if (imc1> 24.9){
+            imprimir(nombre1 +" está con sobrepeso")
+        }
+    </script>
+</body>
+</html>

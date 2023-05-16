@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando Canvas</title>
+</head>
+<h1>Jugando con funciones en Canvas</h1>
+<body>
+    <!-- Se define el tamanho del canvas, (lienzo para poder dibujar) -->
+    <canvas width="600px", height="400px"></canvas> 
+    
+    <script>
+        var pantalla = document.querySelector('canvas'); //Aquí se selecciona el tag canvas con el queryselector y se asigna a la variable pantalla
+        var pincel = pantalla.getContext('2d'); //a pincel se le asigna la propiedad 2d del context de la pantalla
+        var alturaAleatoria = Math.floor(Math.random()*400);
+        var anchoAleatorio = Math.floor(Math.random()*600);
+        function dibujarRectangulo(colorRelleno,posX,posY,ancho,alto){
+            pincel.fillStyle = colorRelleno;
+            pincel.fillRect(posX,posY,ancho,alto);
+        }
+
+dibujarRectangulo('blue',0,0,anchoAleatorio,alturaAleatoria);
+dibujarRectangulo('green',200,0,anchoAleatorio,alturaAleatoria);
+dibujarRectangulo('red',400,0,anchoAleatorio,alturaAleatoria);
+
+function dibujarCirculo(posX,posY,radio,colorRelleno){
+
+    pincel.fillStyle = colorRelleno;
+    pincel.beginPath ();
+    pincel.arc(posX,posY,radio,0,2*3.14);
+    pincel.fill();
+
+}
+
+dibujarCirculo(300,200,50,'blue');
+dibujarCirculo(200,200,50,'lightgreen');
+dibujarCirculo(300,300,50,'red');
+dibujarCirculo(300,100,50,'orange');
+dibujarCirculo(400,200,50,'yellow');
+
+    </script>
+</body>
+</html>

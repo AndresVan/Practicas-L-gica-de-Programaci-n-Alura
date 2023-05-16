@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina adivina</title>
+</head>
+<h1>Adivina, adivina, en qué número estoy pensando?</h1>
+<body>
+    <script>
+        function imprimir(msg){
+            document.write("<br>"+msg);
+        }
+
+        var numeroPensado= Math.round(Math.random()*10);
+        var contador = 1;
+        var intentos = 3;
+        var intentosRestantes = 2;
+
+        while(contador <= intentos){
+            
+            var numLanzado = parseInt (prompt("Ingrese un número entre 0-10, tienes " + intentos + " intentos" ));
+
+            if(numLanzado==numeroPensado){
+            imprimir("<h2>FELICIDADES!!</h2><br> El número pensado era " + numeroPensado + ", usted acertó");
+            break;
+            } 
+            else if (contador == 3){
+                imprimir("<h2>Plop!! <br></h2> Lo tuyo no es adivinar, el número pensado era " + numeroPensado);
+            }else{
+                alert("Lo siento, no adivinaste; te quedan " + intentosRestantes + " intentos");
+            }
+            contador++;
+            intentosRestantes --;
+        }
+
+    </script>
+</body>
+</html>

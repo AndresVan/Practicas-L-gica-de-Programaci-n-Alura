@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando Canvas</title>
+</head>
+<h1>Bandera de Francia, con alteraciones en Canvas</h1>
+<body>
+    <!-- Se define el tamanho del canvas, (lienzo para poder dibujar) -->
+    <canvas width="600px", height="400px"></canvas> 
+    
+    <script>
+        var pantalla = document.querySelector('canvas'); //Aquí se selecciona el tag canvas con el queryselector y se asigna a la variable pantalla
+        var pincel = pantalla.getContext('2d'); //a pincel se le asigna la propiedad 2d del context de la pantalla
+
+        //---------Pintando la bandera de Francia ---------//
+
+        pincel.fillStyle = 'darkblue'; //Aquí se agrega la propiedad color que rellena el canvas
+        pincel.fillRect(0,0,200,400); //Se genera un rectángulo con dimensiones x=0,y=0, ancho 600 y alto 400       
+        pincel.fillStyle = 'white';
+        pincel.fillRect(200,0,200,400);
+        pincel.fillStyle = 'red';
+        pincel.fillRect(400,0,200,400);
+
+        // Pintando un triángulo //
+
+        pincel.fillStyle = 'darkred';
+        pincel.beginPath(); //método para comenzar una unión
+        pincel.moveTo(300,200); //Punto de partida del pincel
+        pincel.lineTo(200,400); //Trazar línea desde la coordenada indicada
+        pincel.lineTo(400,400);
+        pincel.lineTo(300,200);
+        pincel.fill(); //Método para rellenar de pintura la unión de coordenadas
+
+        //Pintando un círculo//
+        pincel.fillStyle= 'blue';
+        pincel.beginPath();
+        pincel.strokeStyle = 'black';
+        pincel.font='40px Georgia'
+        pincel.strokeText('ZISGA',240,50);
+        pincel.arc(300,200,20,0,2*3.1416);
+        pincel.fill();
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var contador = 5;
+        var aleatorio = Math.round(Math.random()*9);
+        
+        while(aleatorio == 0){
+            document.write("absurdo");
+            aleatorio = 1;
+        } 
+
+       /*  for(let i=0; i<=contador; i++){
+            document.write(contador); 
+        } */
+
+        if(aleatorio==2){
+            contador++;
+            document.write(contador); 
+        }else if(aleatorio==1){
+            contador +2 ;
+            document.write(contador); 
+        }else{
+            contador= aleatorio;
+            document.write(contador); 
+        }
+    </script>
+</body>
+</html>

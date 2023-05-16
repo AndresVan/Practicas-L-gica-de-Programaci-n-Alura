@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundiales de la FIFA</title>
+    <h1>AÑOS MUNDIALES DE LA FIFA</h1>
+    <img src="images\CopaMundoFIFA.jpg" alt="CopaMundoFIFA.jpg" width="500" height="px100p" >
+</head>
+<body>
+    
+    <script>
+        var anhoMundial = 1930;
+        var limite = prompt("Hasta que año quiere evaluar los mundiales?");
+
+        function imprimir(msg){
+            document.write("<br>"+msg);
+        }
+
+        while (anhoMundial<= limite){
+            if (anhoMundial <= 2023){
+                imprimir("Hubo mundial de la FIFA en el año: " + anhoMundial);
+            }
+            else{
+                imprimir("Habrá mundial de la FIFA en el año: " + anhoMundial);
+            }
+            anhoMundial = anhoMundial +4;
+        }
+    </script>
+</body>
+</html>

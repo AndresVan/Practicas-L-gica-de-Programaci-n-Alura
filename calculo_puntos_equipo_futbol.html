@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cáculo Puntaje Equipo de Fútbol</title>
+</head>
+<h1>Calcular Puntaje Equipo de Fútbol</h1>
+<body>
+    <script>
+        function imprimir(msg){
+            document.write("<br>"+msg);
+        }
+        var club = prompt("Nombre del equipo de fútbol: ")
+        var victorias = parseInt (prompt("Cuántas victorias suma " + club+ " ?"));
+        var empates = parseInt (prompt("Cuántos empates acumula " + club+ " ?"));
+
+        puntosTotales = victorias * 3 + empates;
+        imprimir("El total de puntos acumulados de  " + club + " es: " + puntosTotales);
+
+    </script>
+</body>
+</html>

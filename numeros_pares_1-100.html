@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pares del 1 al 100</title>
+</head>
+<h1>Números pares del 1 al 100</h1>
+<body>
+    <script>
+
+        function imprimir(msg){
+            document.write("<br>"+msg);
+        }
+        
+        var par = 2;
+        var limite = 100
+
+        while(par<=limite){
+            imprimir(par);
+            par = par + 2;
+        }
+        imprimir("FIN")
+    </script>
+</body>
+</html>
